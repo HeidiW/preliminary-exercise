@@ -123,7 +123,7 @@
 			            ph: phone // And ph represents phone
 	        		})		
 
-	        		ttq.track("",{
+	        		ttq.track("CompleteRegistration",{
 	        			// EVENT PARAMETERS 
 	        		}) 
 	        		
@@ -149,10 +149,16 @@
 
         		ttq.identify({
         			/* ADVANCED MATCHING PARAMETERS */
+					em: email, // Here, em represents email
+			        ph: phone // And ph represents phone
         		})		
 
-        		ttq.track("",{
+        		ttq.track("viewContent",{
         			/* EVENT PARAMETERS */
+				   content_type: 'product', // Here 'product' denotes the type of content
+                   content_id: productId, // Here we're passing the productId
+                   currency: 'USD', // The currency in which the product is priced
+                   value: price // The price of the product 
         		}) 
 
         		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 
@@ -180,12 +186,16 @@
         		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
 
         		ttq.identify({
-        			// ADVANCED MATCHING PARAMETERS
+					em: email, // Here, em represents email
+			        ph: phone // And ph represents phone
         		})		
 
-        		ttq.track("",{
-        			// EVENT PARAMETERS 
-        		}) 
+				ttq.track("AddToCart",{
+                content_type: 'product',
+                content_id: productId,
+                currency: 'USD',
+                value: price
+              }) 
 
         		// END - PLACE YOUR FUNCTIONS IN THIS SECTION    		
         	}
