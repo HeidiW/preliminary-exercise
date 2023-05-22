@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-
     <!-- BEGIN TIKTOK BASE CODE -->
 	<script>
+
 		!function (w, d, t) {
 		w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=
 		["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e)
@@ -18,6 +18,7 @@
 		{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src
 		=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")
 		[0];e.parentNode.insertBefore(n,e)};
+
 		ttq.load('CDTPQQBC77U93DJGNN8G');
 		ttq.page();
 		}(window, document, 'ttq');
@@ -46,7 +47,7 @@
 	    		<td>
        				<div class="container">
        					<div class="box">
-	       					<div class="item-title-1">Product 1</div> 
+	       					<div class="item-title-1 shop-item-title">Product 1</div> 
 	       					<div class="item-product-id-1">Product ID: 5678AB</div>
 	                        <div class="item-price-1">$29.99</div>
 
@@ -58,7 +59,7 @@
                 <td>
                 	<div class="container">
                 		<div class="box">
-		                	<div class="item-title-2">Product 2</div> 
+		                	<div class="item-title-2 shop-item-title">Product 2</div> 
 		                	<div class="item-product-id-2">Product ID: 6521FJ</div>
 		                    <div class="item-price-2">$49.99</div>
 
@@ -70,9 +71,9 @@
          		<td>
          			<div class="container">
          				<div class="box">
-		         			<div class="item-title-3" class="shop-item-title">Product 3</div> 
-		         			<div class="item-product-id-2">Product ID: 4098MD</div>
-		                    <div class="item-price-2" class="shop-item-price">$199.99</div>
+		         			<div class="item-title-3 shop-item-title">Product 3</div> 
+		         			<div class="item-product-id-3">Product ID: 4098MD</div>
+		                    <div class="item-price-3" class="shop-item-price">$199.99</div>
 
 		                    <button onclick="viewContent('Product 3','4098MD',199.99)">View Content Details</button> 
 		                    <button id="add-to-cart-button-3" onclick="addToCart('Product 3','4098MD',199.99)">Add To Cart</button>
@@ -89,9 +90,31 @@
         </footer>
 
     </div>
-
+       <script>
         <!-- BEGIN TIKTOK PIXEL EVENT FUNCTIONS SCRIPT SECTION -->
-        <script>
+			var phone = "+15551234567";
+			var email = "email@example.com";
+	
+			var contents = [
+				{
+					id: '5678AB', // mock product ID
+					description: 'Product 1',
+					quantity: 1,
+					price: 29.99
+				},
+				{
+					id: '6521FJ', // mock product ID
+					description: 'Product 2',
+					quantity: 2,
+					price: 49.99
+				},
+				{
+					id: '4098MD', // mock product ID
+					description: 'Product 3',
+					quantity: 1,
+					price: 199.99
+				}
+			];
         	// BEGIN DO NOT EDIT SECTION 
         	completeRegistration();
         	// END DO NOT EDIT SECTION 
@@ -108,9 +131,6 @@
 
 	        	alert("Registration Complete - Logged in as email@example.com");
 
-	        	var phone = "+15551234567";
-	        	var email = "email@example.com";
-
 	        	console.log("email: " + email);
 	        	console.log("phone: " + phone);
 	        	// END DO NOT EDIT SECTION 
@@ -124,11 +144,14 @@
 	        		})		
 
 	        		ttq.track("CompleteRegistration",{
-	        			// EVENT PARAMETERS 
-	        		}) 
-	        		
-        	    //END - PLACE YOUR FUNCTIONS IN THIS SECTION 
-        	}		
+	        			// EVENT PARAMETERS
+						contents: contents,
+                        currency: 'USD',
+                        value: contents.reduce((total, item) => total + item.price * item.quantity, 0)
+                     });
+                     alert("Payment Completed - Purchase Successful");
+	        		}
+        	    //END - PLACE YOUR FUNCTIONS IN THIS SECTION 	
         	
         	function viewContent(title, productId, price) {
         	    // BEGIN DO NOT EDIT SECTION 
@@ -155,16 +178,16 @@
 
         		ttq.track("viewContent",{
         			/* EVENT PARAMETERS */
-				   content_type: 'product', // Here 'product' denotes the type of content
-                   content_id: productId, // Here we're passing the productId
-                   currency: 'USD', // The currency in which the product is priced
-                   value: price // The price of the product 
+				   content_type: 'product', // 'product' denotes the type of content
+                   content_id: productId, // pass the productId
+                   currency: 'USD', // currency in which the product is priced
+                   value: price // price of the product 
         		}) 
 
         		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 
         	}
         	
-        	function addToCart(title, productId, price) { 
+        	function addToCart(title, productId, price, quantity, mail, phone) { 
         		// BEGIN HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENTS 
         		console.log("addToCart Function")
         		console.log("title:" + " " + title);
@@ -174,7 +197,7 @@
 
         		// BEGIN DO NOT EDIT SECTION 
         		if (title == "Product 1") {
-        			document.getElementById("add-to-cart-button-1").disabled = 'true';
+        			document.getElementById("add-to-cart-button-1").disabled = 'false';
         		} else if (title == "Product 2") {
         			document.getElementById("add-to-cart-button-2").disabled = 'true';
         		} else if (title == "Product 3") {
@@ -191,7 +214,9 @@
         		})		
 
 				ttq.track("AddToCart",{
-                content_type: 'product',
+				content_type: 'product',
+				quantity,
+                title: title,
                 content_id: productId,
                 currency: 'USD',
                 value: price
@@ -207,13 +232,17 @@
         		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
 
         		  ttq.identify({
-        			// ADVANCED MATCHING PARAMETERS 
+					em: email,
+			        ph: phone
         		  })	
 
                   // BEGIN HINT - MULTIPLE ITEMS 
-        		  ttq.track('', {contents: [
-
-        		  ]})
+        		  // Tracking a 'Purchase' event
+                  ttq.track('Purchase', {
+                    contents: contents,
+                    currency: 'USD',
+                    value: 465
+                   });
         		  // END HINT - MULTIPLE ITEMS 
 
         		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 
@@ -231,13 +260,17 @@
         	function completePayment() {
         		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
         		  ttq.identify({
-        			// ADVANCED MATCHING PARAMETERS 
+        			em: email,
+			        ph: phone
         		  })	
 
                   // BEGIN HINT - MULTIPLE ITEMS 
-        		  ttq.track('', {contents: [
-
-        		  ]})
+        		  ttq.track('CompletePayment', {
+					contents: contents,
+					currency: 'USD',
+					//The value field is calculated by multiplying each item's price by its quantity and summing the results for all items.
+					value: contents.reduce((total, item) => total + item.price * item.quantity, 0)
+				})
         		  // END HINT - MULTIPLE ITEMS 
 
         		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 	
@@ -245,7 +278,7 @@
         		// BEGIN DO NOT EDIT SECTION 
         		alert("Payment Completed - Purchase Successful")
         		// END DO NOT EDIT SECTION 
-        	}
+			}
         </script>
         <!-- END TIKTOK PIXEL EVENT FUNCTIONS SCRIPT SECTION -->
 
