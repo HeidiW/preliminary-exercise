@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <!-- TIKTOK PIXEL -->
-	<script>
-		!function (w, d, t) {
-		w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=
-		["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e)
-		{t[e]=function()
-		{t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var
-		i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++
-		)ttq.setAndDefer(e,ttq.methods[n]);return e},
-		ttq.load=function(e,n){var
-		i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||
-		{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new
-		Date,ttq._o=ttq._o||{},ttq._o[e]=n||
-		{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src
-		=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")
-		[0];e.parentNode.insertBefore(n,e)};
 
-		ttq.load('CDTPQQBC77U93DJGNN8G');
-		if (document.location.href.indexOf('appspot.com') == -1) {
-		ttq.page();
+<head>
+	<!-- TIKTOK PIXEL -->
+	<script>
+
+		!function (w, d, t) {
+			w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods =
+				["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) {
+					t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) }
+				}; for (var
+					i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+						for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++
+						)ttq.setAndDefer(e, ttq.methods[n]); return e
+					},
+						ttq.load = function (e, n) {
+							var
+							i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i ||
+								{}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new
+									Date, ttq._o = ttq._o || {}, ttq._o[e] = n ||
+									{}; n = document.createElement("script"); n.type = "text/javascript", n.async = !0, n.src
+										= i + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")
+										[0]; e.parentNode.insertBefore(n, e)
+						};
+
+			ttq.load('CDTPQQBC77U93DJGNN8G');
+			ttq.page();
 		}(window, document, 'ttq');
-	}
-		</script>
+	</script>
 	<!-- END TIKTOK BASE CODE -->
 
-        <title>Hello World | Store</title>
-    </head>
-	<body>
+	<title>Hello World | Store</title>
+</head>
+
+<body>
 	<div class="content">
 		<header>
 			<h1 class="title">Hello World | Store</h1>
@@ -36,303 +41,307 @@
 				Items In Cart:<input type="number" id="cart-items" width="10" height="10" value="0">
 			</div>
 		</header>
-		
-	   <container>
-          <div>
-            Logged in as email@example.com
-          </div>
-       </container>
 
-	    <table>
-	    	<tr>
-	    		<td>
-       				<div class="container">
-       					<div class="box">
-	       					<div class="item-title-1 shop-item-title">Product 1</div> 
-	       					<div class="item-product-id-1">Product ID: 5678AB</div>
-	                        <div class="item-price-1">$29.99</div>
+		<container>
+			<div>
+				Logged in as email@example.com
+			</div>
+		</container>
 
-	                        <button onclick="viewContent('Product 1','5678AB',29.99)">View Content Details</button> 
-	                        <button id="add-to-cart-button-1" onclick="addToCart('Product 1','5678AB',29.99)">Add To Cart</button>
-	                    </div>
-       				</div>
-       			</td>
-                <td>
-                	<div class="container">
-                		<div class="box">
-		                	<div class="item-title-2 shop-item-title">Product 2</div> 
-		                	<div class="item-product-id-2">Product ID: 6521FJ</div>
-		                    <div class="item-price-2">$49.99</div>
+		<table>
+			<tr>
+				<td>
+					<div class="container">
+						<div class="box">
+							<div class="item-title-1 shop-item-title">Product 1</div>
+							<div class="item-product-id-1">Product ID: 5678AB</div>
+							<div class="item-price-1">$29.99</div>
 
-		                    <button onclick="viewContent('Product 2','6521FJ',49.99)">View Content Details</button> 
-		                    <button id="add-to-cart-button-2" onclick="addToCart('Product 2','6521FJ',49.99)">Add To Cart</button>
-		                </div>
-	                </div>
-                </td>
-         		<td>
-         			<div class="container">
-         				<div class="box">
-		         			<div class="item-title-3 shop-item-title">Product 3</div> 
-		         			<div class="item-product-id-3">Product ID: 4098MD</div>
-		                    <div class="item-price-3" class="shop-item-price">$199.99</div>
+							<button onclick="viewContent('Product 1','5678AB',29.99)">View Content Details</button>
+							<button id="add-to-cart-button-1" onclick="addToCart('Product 1','5678AB',29.99)">Add To
+								Cart</button>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="container">
+						<div class="box">
+							<div class="item-title-2 shop-item-title">Product 2</div>
+							<div class="item-product-id-2">Product ID: 6521FJ</div>
+							<div class="item-price-2">$49.99</div>
 
-		                    <button onclick="viewContent('Product 3','4098MD',199.99)">View Content Details</button> 
-		                    <button id="add-to-cart-button-3" onclick="addToCart('Product 3','4098MD',199.99)">Add To Cart</button>
-		                </div> 
-	                </div>
-         		</td>
-         	</tr>
-        </table>
+							<button onclick="viewContent('Product 2','6521FJ',49.99)">View Content Details</button>
+							<button id="add-to-cart-button-2" onclick="addToCart('Product 2','6521FJ',49.99)">Add To
+								Cart</button>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="container">
+						<div class="box">
+							<div class="item-title-3 shop-item-title">Product 3</div>
+							<div class="item-product-id-3">Product ID: 4098MD</div>
+							<div class="item-price-3" class="shop-item-price">$199.99</div>
 
-        <button class="checkout" onclick="initiateCheckout()">Initiate Checkout</button>
+							<button onclick="viewContent('Product 3','4098MD',199.99)">View Content Details</button>
+							<button id="add-to-cart-button-3" onclick="addToCart('Product 3','4098MD',199.99)">Add To
+								Cart</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
 
-        <footer>
+		<button class="checkout" onclick="initiateCheckout()">Initiate Checkout</button>
 
-        </footer>
+		<footer>
 
-    </div>
-       <script>
-        <!-- BEGIN TIKTOK PIXEL EVENT FUNCTIONS SCRIPT SECTION -->
-			var phone = "+15551234567";
-			var email = "email@example.com";
-	
-			var contents = [
-				{
-					id: '5678AB', // mock product ID
-					description: 'Product 1',
-					quantity: 1,
-					price: 29.99
-				},
-				{
-					id: '6521FJ', // mock product ID
-					description: 'Product 2',
-					quantity: 2,
-					price: 49.99
-				},
-				{
-					id: '4098MD', // mock product ID
-					description: 'Product 3',
-					quantity: 1,
-					price: 199.99
-				}
-			];
-        	completeRegistration();
+		</footer>
 
-        	function completeRegistration() {
-	        	// BEGIN DO NOT EDIT SECTION 
-	        	console.log("completeRegistration Function")
+	</div>
+	<script>
+		<!-- BEGIN TIKTOK PIXEL EVENT FUNCTIONS SCRIPT SECTION -->
+		var phone = "+15551234567";
+		var email = "email@example.com";
 
-	        	alert("Required Registration Step - click OK to continue" + 
-	        		   "\n" + "Email address provided is email@example.com");
+		var contents = [
+			{
+				id: '5678AB', // mock product ID
+				description: 'Product 1',
+				quantity: 1,
+				price: 29.99
+			},
+			{
+				id: '6521FJ', // mock product ID
+				description: 'Product 2',
+				quantity: 2,
+				price: 49.99
+			},
+			{
+				id: '4098MD', // mock product ID
+				description: 'Product 3',
+				quantity: 1,
+				price: 199.99
+			}
+		];
+		completeRegistration();
 
-	        	alert("Required Registration Step - click OK to continue" + 
-	        		   "\n" + "Phone number provided +15551234567");
+		function completeRegistration() {
+			// BEGIN DO NOT EDIT SECTION
+			console.log("completeRegistration Function")
 
-	        	alert("Registration Complete - Logged in as email@example.com");
+			alert("Required Registration Step - click OK to continue" +
+				"\n" + "Email address provided is email@example.com");
 
-	        	console.log("email: " + email);
-	        	console.log("phone: " + phone);
-	        	// END DO NOT EDIT SECTION 
+			alert("Required Registration Step - click OK to continue" +
+				"\n" + "Phone number provided +15551234567");
 
-	        	// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
+			alert("Registration Complete - Logged in as email@example.com");
 
-	        		ttq.identify({
-	        			// ADVANCED MATCHING PARAMETERS 
-						email: email,
-			            phone: phone
-	        		})		
+			console.log("email: " + email);
+			console.log("phone: " + phone);
+			// END DO NOT EDIT SECTION
 
-	        		ttq.track("CompleteRegistration",{
-	        			// EVENT PARAMETERS
-						contents: contents,
-                        currency: 'USD',
-                        value: contents.reduce((total, item) => total + item.price * item.quantity, 0)
-                     });
-                     alert("Payment Completed - Purchase Successful");
-	        		}
-        	    //END - PLACE YOUR FUNCTIONS IN THIS SECTION 	
-        	
-        	function viewContent(title, productId, price) {
-        	    // BEGIN DO NOT EDIT SECTION 
-        	    alert("Mock Product Item Details Popup: " 
-        	    	+ "\n" + "title: " + title 
-        	    	+ "\n" + "price: " + price 
-        	    	+ "\n" + "productId: " +  productId)
-        	    // END DO NOT EDIT SECTION 
+			// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION
 
-        		// BEGIN HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENT
-        		console.log("viewContent Function")
-        		console.log("title:" + " " + title);
-        		console.log("price:" + " " + price);
-        		console.log("productId:" + " " + productId);
-        		// END HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENT
+			ttq.identify({
+				// ADVANCED MATCHING PARAMETERS
+				email: email,
+				phone: phone
+			})
 
-        		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
+			ttq.track("CompleteRegistration", {
+				// EVENT PARAMETERS
+				contents: contents,
+				currency: 'USD',
+				value: contents.reduce((total, item) => total + item.price * item.quantity, 0)
+			});
+			alert("Payment Completed - Purchase Successful");
+		}
+		//END - PLACE YOUR FUNCTIONS IN THIS SECTION
 
-        		ttq.identify({
-        			/* ADVANCED MATCHING PARAMETERS */
-					email: email,
-			        phone: phone
-        		})		
+		function viewContent(title, productId, price) {
+			// BEGIN DO NOT EDIT SECTION
+			alert("Mock Product Item Details Popup: "
+				+ "\n" + "title: " + title
+				+ "\n" + "price: " + price
+				+ "\n" + "productId: " + productId)
+			// END DO NOT EDIT SECTION
 
-        		ttq.track("viewContent",{
-        			/* EVENT PARAMETERS */
-				   content_type: 'product', // 'product' denotes the type of content
-                   content_id: productId, // pass the productId
-                   currency: 'USD', // currency in which the product is priced
-                   value: price // price of the product 
-        		});
+			// BEGIN HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENT
+			console.log("viewContent Function")
+			console.log("title:" + " " + title);
+			console.log("price:" + " " + price);
+			console.log("productId:" + " " + productId);
+			// END HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENT
 
-        		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 
-        	}
-        	
-        	function addToCart(title, productId, price, quantity, mail, phone) { 
-        		// BEGIN HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENTS 
-        		console.log("addToCart Function")
-        		console.log("title:" + " " + title);
-        		console.log("price:" + " " + price);
-        		console.log("productId:" + " " + productId);
-        		// END HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENTS 
+			// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION
 
-        		// BEGIN DO NOT EDIT SECTION 
-        		if (title == "Product 1") {
-        			document.getElementById("add-to-cart-button-1").disabled = 'false';
-        		} else if (title == "Product 2") {
-        			document.getElementById("add-to-cart-button-2").disabled = 'true';
-        		} else if (title == "Product 3") {
-        			document.getElementById("add-to-cart-button-3").disabled = 'true';
-        		}
-        		document.getElementById("cart-items").stepUp();
-        		// END DO NOT EDIT SECTION 
+			ttq.identify({
+				/* ADVANCED MATCHING PARAMETERS */
+				email: email,
+				phone: phone
+			})
 
-        		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
+			ttq.track("viewContent", {
+				/* EVENT PARAMETERS */
+				content_type: 'product', // 'product' denotes the type of content
+				content_id: productId, // pass the productId
+				currency: 'USD', // currency in which the product is priced
+				value: price // price of the product
+			});
 
-        		ttq.identify({
-					email: email,
-			        phone: phone
-        		})		
+			// END - PLACE YOUR FUNCTIONS IN THIS SECTION
+		}
 
-				ttq.track("AddToCart",{
+		function addToCart(title, productId, price, quantity, mail, phone) {
+			// BEGIN HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENTS
+			console.log("addToCart Function")
+			console.log("title:" + " " + title);
+			console.log("price:" + " " + price);
+			console.log("productId:" + " " + productId);
+			// END HINT: UTILIZE THESE VARIABLES WHEN CONSTRUCTING YOUR CORRESPONDING TIKTOK PIXEL EVENTS
+
+			// BEGIN DO NOT EDIT SECTION
+			if (title == "Product 1") {
+				document.getElementById("add-to-cart-button-1").disabled = 'false';
+			} else if (title == "Product 2") {
+				document.getElementById("add-to-cart-button-2").disabled = 'true';
+			} else if (title == "Product 3") {
+				document.getElementById("add-to-cart-button-3").disabled = 'true';
+			}
+			document.getElementById("cart-items").stepUp();
+			// END DO NOT EDIT SECTION
+
+			// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION
+
+			ttq.identify({
+				email: email,
+				phone: phone
+			})
+
+			ttq.track("AddToCart", {
 				content_type: 'product',
 				quantity,
-                title: title,
-                content_id: productId,
-                currency: 'USD',
-                value: price
-              }) 
+				title: title,
+				content_id: productId,
+				currency: 'USD',
+				value: price
+			})
 
-        		// END - PLACE YOUR FUNCTIONS IN THIS SECTION    		
-        	}
+			// END - PLACE YOUR FUNCTIONS IN THIS SECTION
+		}
 
-        	function initiateCheckout() {
-        		var retVal = confirm("This is a pop up meant to be a mock initiate checkout step - clicking OK will assume that the correct payment information was entered by the customer. Purchase will then complete successfully. HINT: Clicking Cancel should not trigger any events");
+		function initiateCheckout() {
+			var retVal = confirm("This is a pop up meant to be a mock initiate checkout step - clicking OK will assume that the correct payment information was entered by the customer. Purchase will then complete successfully. HINT: Clicking Cancel should not trigger any events");
 
-        		if (retVal == true) { 
-        		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
+			if (retVal == true) {
+				// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION
 
-        		  ttq.identify({
+				ttq.identify({
 					email: email,
-			        phone: phone
-        		  })	
+					phone: phone
+				})
 
-                  // BEGIN HINT - MULTIPLE ITEMS 
-        		  // Tracking a 'Purchase' event
-                  ttq.track('Purchase', {
-                    contents: contents,
-                    currency: 'USD',
-                    value: 465
-                   });
-        		  // END HINT - MULTIPLE ITEMS 
-
-        		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 
-
-                // BEGIN DO NOT EDIT SECTION 
-        		   completePayment();
-        		} else {	
-        		   alert("Payment step cancelled!");
-                   return false;    
-        		}
-        		// END DO NOT EDIT SECTION 
-        	}
-
-        	// HINT: This is the dedicated function for Complete Payment
-        	function completePayment() {
-        		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
-        		  ttq.identify({
-        			email: email,
-			        phone: phone
-        		  })	
-
-                  // BEGIN HINT - MULTIPLE ITEMS 
-        		  ttq.track('CompletePayment', {
+				// BEGIN HINT - MULTIPLE ITEMS
+				// Tracking a 'Purchase' event
+				ttq.track('Purchase', {
 					contents: contents,
 					currency: 'USD',
-					//The value field is calculated by multiplying each item's price by its quantity and summing the results for all items.
-					value: contents.reduce((total, item) => total + item.price * item.quantity, 0)
-				})
-        		  // END HINT - MULTIPLE ITEMS 
+					value: 465
+				});
+				// END HINT - MULTIPLE ITEMS
 
-        		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 	
+				// END - PLACE YOUR FUNCTIONS IN THIS SECTION
 
-        		// BEGIN DO NOT EDIT SECTION 
-        		alert("Payment Completed - Purchase Successful")
-        		// END DO NOT EDIT SECTION 
+				// BEGIN DO NOT EDIT SECTION
+				completePayment();
+			} else {
+				alert("Payment step cancelled!");
+				return false;
 			}
-        </script>
-        <!-- END TIKTOK PIXEL EVENT FUNCTIONS SCRIPT SECTION -->
+			// END DO NOT EDIT SECTION
+		}
 
-        <!-- BEGIN STYLING SECTION - DO NOT EDIT -->
-		<style type="text/css">
-			h1 + div {
-				padding-left: 370px;
-			}
+		// HINT: This is the dedicated function for Complete Payment
+		function completePayment() {
+			// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION
+			ttq.identify({
+				email: email,
+				phone: phone
+			})
 
-			div {
-				padding: 10px;
-			}
+			// BEGIN HINT - MULTIPLE ITEMS
+			ttq.track('CompletePayment', {
+				contents: contents,
+				currency: 'USD',
+				//The value field is calculated by multiplying each item's price by its quantity and summing the results for all items.
+				value: contents.reduce((total, item) => total + item.price * item.quantity, 0)
+			})
+			// END HINT - MULTIPLE ITEMS
 
-			table {
-				padding-bottom: 20px;
-			}
+			// END - PLACE YOUR FUNCTIONS IN THIS SECTION
 
-			footer {
-				padding: 10px;
-			}
+			// BEGIN DO NOT EDIT SECTION
+			alert("Payment Completed - Purchase Successful")
+			// END DO NOT EDIT SECTION
+		}
+	</script>
+	<!-- END TIKTOK PIXEL EVENT FUNCTIONS SCRIPT SECTION -->
 
-			.box {
-				box-sizing: content-box;    
-				width: 200px;
-				height: 180px;
-				padding: 20px;    
-				border: 2px solid black;
-				text-align: center;
-	        }
+	<!-- BEGIN STYLING SECTION - DO NOT EDIT -->
+	<style type="text/css">
+		h1+div {
+			padding-left: 370px;
+		}
 
-			.cart {		
-				float: right;
-			}
+		div {
+			padding: 10px;
+		}
 
-			.content {
-				max-width: 800px;
-				margin: auto;
-			}
+		table {
+			padding-bottom: 20px;
+		}
 
-			.container {
-				display: flex;
-		        flex-wrap: wrap;
-		        justify-content: space-between;
-		        align-items: center;
-			}
+		footer {
+			padding: 10px;
+		}
 
-			.title {
-				display: inline-block;
-			}
+		.box {
+			box-sizing: content-box;
+			width: 200px;
+			height: 180px;
+			padding: 20px;
+			border: 2px solid black;
+			text-align: center;
+		}
 
-			#cart-items {
-				border: 0;
-			}
-    	</style>
-    	<!-- END STYLING SECTION - DO NOT EDIT -->
+		.cart {
+			float: right;
+		}
 
-	</body>
+		.content {
+			max-width: 800px;
+			margin: auto;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.title {
+			display: inline-block;
+		}
+
+		#cart-items {
+			border: 0;
+		}
+	</style>
+	<!-- END STYLING SECTION - DO NOT EDIT -->
+
+</body>
+
 </html>
