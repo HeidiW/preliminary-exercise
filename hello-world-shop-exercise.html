@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <!-- BEGIN TIKTOK BASE CODE -->
+    <!-- TIKTOK PIXEL -->
 	<script>
-
 		!function (w, d, t) {
 		w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=
 		["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e)
@@ -20,8 +19,10 @@
 		[0];e.parentNode.insertBefore(n,e)};
 
 		ttq.load('CDTPQQBC77U93DJGNN8G');
+		if (document.location.href.indexOf('appspot.com') == -1) {
 		ttq.page();
 		}(window, document, 'ttq');
+	}
 		</script>
 	<!-- END TIKTOK BASE CODE -->
 
@@ -137,8 +138,8 @@
 
 	        		ttq.identify({
 	        			// ADVANCED MATCHING PARAMETERS 
-						em: email, // Here, em represents email
-			            ph: phone // And ph represents phone
+						email: email,
+			            phone: phone
 	        		})		
 
 	        		ttq.track("CompleteRegistration",{
@@ -170,8 +171,8 @@
 
         		ttq.identify({
         			/* ADVANCED MATCHING PARAMETERS */
-					em: email, // Here, em represents email
-			        ph: phone // And ph represents phone
+					email: email,
+			        phone: phone
         		})		
 
         		ttq.track("viewContent",{
@@ -180,7 +181,7 @@
                    content_id: productId, // pass the productId
                    currency: 'USD', // currency in which the product is priced
                    value: price // price of the product 
-        		}) 
+        		});
 
         		// END - PLACE YOUR FUNCTIONS IN THIS SECTION 
         	}
@@ -207,8 +208,8 @@
         		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
 
         		ttq.identify({
-					em: email, // Here, em represents email
-			        ph: phone // And ph represents phone
+					email: email,
+			        phone: phone
         		})		
 
 				ttq.track("AddToCart",{
@@ -230,8 +231,8 @@
         		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
 
         		  ttq.identify({
-					em: email,
-			        ph: phone
+					email: email,
+			        phone: phone
         		  })	
 
                   // BEGIN HINT - MULTIPLE ITEMS 
@@ -258,8 +259,8 @@
         	function completePayment() {
         		// BEGIN - PLACE YOUR FUNCTIONS IN THIS SECTION 
         		  ttq.identify({
-        			em: email,
-			        ph: phone
+        			email: email,
+			        phone: phone
         		  })	
 
                   // BEGIN HINT - MULTIPLE ITEMS 
